@@ -1,0 +1,25 @@
+{
+  "name": "syncme-websockets",
+  "version": "1.0.0",
+  "description": "A little remaster of a project based on syncing desktop and mobile browser, now using websockets for a better and faster comminications.",
+  "scripts": {
+    "install-all": "echo \"Starting instalation of dependecies:\" && cd client && npm install && cd .. && cd server && npm install && cd .. && echo \"Installation successfully completed!\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelRCamargo/syncme-websockets.git"
+  },
+  "keywords": [
+    "websockets",
+    "react",
+    "sync",
+    "qrcode"
+  ],
+  "author": "RafaelRCamargo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelRCamargo/syncme-websockets/issues"
+  },
+  "homepage": "https://github.com/RafaelRCamargo/syncme-websockets#readme"
+}
