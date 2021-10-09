@@ -1,0 +1,15 @@
+{
+  "short_name": "SyncMe",
+  "name": "SyncMe",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-svg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#262523",
+  "background_color": "#f5e7d5"
+}

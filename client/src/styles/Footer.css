@@ -1,0 +1,18 @@
+.footer-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyrights {
+  font-style: italic;
+  padding: 2rem;
+  transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.footer-copyrights:hover {
+  transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  font-weight: 800;
+  font-style: oblique;
+}

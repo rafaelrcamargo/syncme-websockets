@@ -1,0 +1,7 @@
+:root {
+    --clr-neutral-900-60:hsla(40, 4%, 14%, 0.376);
+    --clr-neutral-900:#262523;
+    --clr-neutral-100:#f5e7d5;
+    --misc-transition: .3s cubic-bezier(0.19, 1, 0.22, 1);
+    --font-family:'Playfair Display', serif;
+}

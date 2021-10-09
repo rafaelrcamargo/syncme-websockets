@@ -1,0 +1,31 @@
+html, body, *, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--clr-neutral-900, #262523);
+  font-family: 'Lato', sans-serif;
+  transition: var(--misc-transition, .3s cubic-bezier(0.19, 1, 0.22, 1));
+}
+
+::selection {
+  background-color: var(--clr-neutral-900-60, hsla(40, 4%, 14%, 0.376));
+  color: var(--clr-neutral-100, #f5e7d5);
+}
+
+body {
+  background-color: var(--clr-neutral-100, #f5e7d5);
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: var(--font-family, 'Playfair Display', serif);
+}
+
+strong {
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}

@@ -1,0 +1,97 @@
+.modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--clr-neutral-900-60);
+  z-index: 9998;
+  transform: scaleY(0);
+  animation: fadeInWrapper .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform-origin: center;
+}
+
+@keyframes fadeInWrapper {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--clr-neutral-100);
+  z-index: 9999;
+  animation: fadeInModal .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards .25s;
+  border: 1px solid var(--clr-neutral-900);
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+}
+
+.modal-container :nth-child(1) {
+  opacity: 0;
+  animation: fadeInText .3s ease-in-out forwards .5s;
+}
+.modal-container :nth-child(2) {
+  opacity: 0;
+  animation: fadeInText .3s ease-in-out forwards .6s;
+}
+.modal-container :nth-child(3) {
+  opacity: 0;
+  animation: fadeInText .3s ease-in-out forwards .7s;
+}
+.modal-container :nth-child(4) {
+  opacity: 0;
+  animation: fadeInText .3s ease-in-out forwards .8s;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translate(-10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.modal-container h1 {
+  font-size: 2rem;
+}
+
+.modal-container h2 {
+  display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+}

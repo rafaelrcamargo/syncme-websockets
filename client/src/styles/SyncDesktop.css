@@ -1,0 +1,149 @@
+.game-screen {
+  position: relative;
+  margin: 0 6rem;
+  width: calc(100% - 12rem);
+  height: 200px;
+  border: 1px solid var(--clr-neutral-900, #262523);
+  overflow: hidden;
+}
+
+.dino {
+  position: relative;
+  top: calc(100% - 80px);
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url("./dancing-dino.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+  animation: 0.8s linear ease-in-out;
+}
+
+.dino--jumping {
+  animation-name: jump;
+}
+
+@keyframes jump {
+  0% {
+    top: calc(100% - 80px);;
+  }
+  30% {
+    top: calc(100% - 180px);
+  }
+  50% {
+    top: calc(100% - 200px);
+  }
+  70% {
+    top: calc(100% - 180px);
+  }
+  100% {
+    top: calc(100% - 80px);;
+  }
+}
+
+.ground {
+  position: relative;
+  top: calc(100% - 100px);
+  right: 0;
+  width: 100%;
+  height: 30px;
+  filter: brightness(0.5);
+  background-image: url("./ground.png");
+  background-size: cover;
+  background-position: 0%;
+  animation: 6s infinite forwards linear;
+  z-index: -1;
+}
+
+@keyframes ground {
+  0% {
+    background-position: 0%;
+  }
+  99% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.cactus {
+  position: absolute;
+  top: calc(100% - 86px);
+  width: 40px;
+  height: 70px;
+  left: 120%;
+  filter: brightness(0.5);
+  background-image: url("./cactus.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+  animation: 3.13s infinite forwards linear;
+}
+
+@keyframes cactus {
+  0% {
+    left: 120%;
+  }
+  100% {
+    left: -20%;
+  }
+}
+
+.game-over {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-neutral-900, #262523);
+  color: var(--clr-neutral-100, #fe2220);
+  z-index: 99;
+}
+
+.game-over svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  color: var(--clr-neutral-100, #fe2220);
+  z-index: 999;
+  animation: 2s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes gameover {
+  0% {
+    transform: translate(-50%, -50%) scaleY(0) scaleX(0); 
+    filter: saturate(0);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-50%, -50%) scaleY(.2) scaleX(.2);
+    filter: saturate(0);
+    opacity: .4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+    filter: saturate(1);
+  }
+}
+
+.loading {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff30;
+  background-blend-mode: screen;
+  z-index: 99;
+  transition: 1s;
+}
