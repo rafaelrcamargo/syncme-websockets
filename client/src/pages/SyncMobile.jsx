@@ -7,7 +7,7 @@ import { SyncContext } from "../context/SyncContext";
 import "../styles/SyncMobile.css";
 
 import io from "socket.io-client";
-const socket = io("wss://syncme-websockets-server.vercel.app:4000", { transports: ["websocket"] });
+const socket = io("syncme-websockets-server.herokuapp.com:4000", { transports: ["websocket"] });
 
 export default function SyncMobile() {
   const { rootId, mobileId } = useParams();
