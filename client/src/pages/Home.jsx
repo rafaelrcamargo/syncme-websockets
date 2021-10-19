@@ -12,7 +12,7 @@ import "../styles/Home.css";
 import "../styles/Modal.css";
 
 import io from "socket.io-client";
-const socket = io("wss://syncme-websockets-server.vercel.app:4000", { transports: ["websocket"] });
+const socket = io("syncme-websockets-server.herokuapp.com:4000", { transports: ["websocket"] });
 
 export default function Home() {
   const { rootId, mobileId } = useContext(SyncContext);
