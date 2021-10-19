@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A little remaster of a project based on syncing desktop and mobile browser, now using websockets for a better and faster comminications.",
   "scripts": {
-    "start": "cd server && node server.js",
+    "start": "cd server && npm install && node server.js",
     "install-all": "echo \"Starting instalation of dependecies:\" && cd client && npm install && cd .. && cd server && npm install && cd .. && echo \"Installation successfully completed!\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
