@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import "../styles/SyncDesktop.css";
 
 import io from "socket.io-client";
-const socket = io("http://localhost:4000", { transports: ["websocket"] });
+const socket = io("https://syncme-websockets-server.herokuapp.com:4000", { transports: ["websocket"] });
 
 export default function SyncDesktop() {
   const { rootId, mobileId } = useParams();
